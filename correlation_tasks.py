@@ -1,10 +1,6 @@
 from __future__ import annotations
-
 import pandas as pd
-
 from grader_contracts.correlation_tasks import BrainCorrelationSummary, BrainDataInput
-
-
 def analyze_brain_correlations(data: BrainDataInput) -> BrainCorrelationSummary:
     df = pd.read_csv(data.csv_path, sep='\t', na_values='NA')
     men = df[df['Gender'] == 'Male']
